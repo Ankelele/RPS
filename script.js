@@ -14,6 +14,9 @@ function getComputerChoice() {
     return computerSelection, randomIndex;
 
 }
+console.log(
+    "fdsf"
+);
 
 function selectRock() {
     userSelection = "R";
