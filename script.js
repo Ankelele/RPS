@@ -61,16 +61,25 @@ function checkWinner(userSelection, computerSelection) {
         userSelection === "S" && computerSelection === "P") {
 
         a = "You win!";
-        Uwins ++;
+        Uwins++;
         document.getElementById("Uwins").innerHTML = Uwins;
-        return a, Uwins;
+        c = c + 1;
+        if (Cwins == 5 || Uwins == 5) {
+            window.location.reload()
+        }
+        return a, Uwins, c;
     } else {
 
         a = "Computer wins!";
-        Cwins ++;
+        Cwins++;
         document.getElementById("Cwins").innerHTML = Cwins;
-        return a, Cwins;
+
+        if (Cwins == 5 || Uwins == 5) {
+            window.location.reload()
+        }
+        return a, Cwins, c;
     }
+
 }
 
 
