@@ -58,6 +58,9 @@ function checkWinner(userSelection, computerSelection) {
     if (userSelection === computerSelection) {
 
         a = "Tie!";
+        if (Cwins == 5 || Uwins == 5) {
+            window.location.reload()
+        }
         return a;
     } else if (userSelection === "R" && computerSelection === "S" ||
         userSelection === "P" && computerSelection === "R" ||
